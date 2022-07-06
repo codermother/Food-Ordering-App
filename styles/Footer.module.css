@@ -2,39 +2,40 @@
     height: calc(100vh - 100px);
     background-color: #222;
     display: flex;
-  }
+}
   
-  .item {
+.item {
     flex: 1;
     position: relative;
     display: flex;
-  }
+}
   
-  .item:last-child {
+
+.item:last-child {
     flex: 2;
     padding: 50px;
     justify-content: space-between;
-  }
+}
   
-  .card {
+.card {
     flex: 1;
     padding: 0 20px;
-  }
+}
   
-  .title {
+.title {
     font-size: 18px;
     color: #b7903c;
-  }
+}
   
-  .text {
+.text {
     color: lightgray;
-  }
+}
   
-  .motto {
+.motto {
     color: rgb(211, 211, 211);
-  }
+}
   
-  @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .container {
       height: auto;
       text-align: center;
