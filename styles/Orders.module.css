@@ -80,12 +80,32 @@
   margin-top: 20px;
   cursor: not-allowed;
 }
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
   .container {
     flex-direction: column;
   }
 
+  .row:last-child {
+    width: 100%;
+  }
+
+  .done,
+  .undone,
+  .inProgress {
+    margin-bottom: 30px;
+  }
+
+  .right{
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .trTitle {
     display: none;
   }

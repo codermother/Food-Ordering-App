@@ -35,7 +35,7 @@
     color: rgb(211, 211, 211);
 }
   
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .container {
       height: auto;
       text-align: center;

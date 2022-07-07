@@ -80,7 +80,7 @@
     color: #d1411e;
 }
 
-@media screen and (max-width:480px) {
+ @media screen and (max-width:750px) {
   .item:nth-child(2) {
     display: none;
   }
@@ -88,4 +88,5 @@
   .item:nth-child(1) {
     flex: 3;
   }
-}
+} 
+

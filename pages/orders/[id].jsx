@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/Order.module.css";
+import styles from "../../styles/Orders.module.css";
 
 function Order() {
   const status = 0;

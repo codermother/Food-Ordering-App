@@ -57,12 +57,24 @@
     margin-top: 20px;
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 800px) {
     .container {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px;
     }
-  
+    
+    .right{
+      justify-content: center;
+      display: flex;
+    }
+
+   .wrapper{
+    width: 60%;
+   }
+  }
+
+  @media screen and (max-width: 500px) {
+ 
     .table {
       display: flex;
       flex-direction: column;
@@ -112,3 +124,4 @@
       width: 100%;
     }
   }
+
