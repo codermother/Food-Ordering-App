@@ -7,7 +7,7 @@
     flex: 1;
     height: 100%;
     display: flex;
-    align-items: center;
+    padding-top: 50px;
     justify-content: center;
 }
   
@@ -18,7 +18,7 @@
   
 .imgContainer {
     width: 80%;
-    height: 80%;
+    height: 300px;
     position: relative;
 }
   
