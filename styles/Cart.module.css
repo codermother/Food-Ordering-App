@@ -3,36 +3,35 @@
     display: flex;
   }
   
-  .left {
+.left {
     flex: 2;
-  }
+}
   
-  .right {
+.right {
     flex: 1;
-  }
+}
   
-  .imgContainer {
+.imgContainer {
     width: 100px;
     height: 100px;
     position: relative;
-  }
+}
   
-  .table {
+.table {
     width: 100%;
     border-spacing: 20px;
-  }
+}
   
-  .name {
+.name {
     font-weight: 500;
     color: #d1411e;
     font-size: 18px;
-  }
+}
   
-  .total {
+.total {
     font-weight: 500;
     font-size: 18px;
-  }
-  
+}
   .wrapper {
     width: 90%;
     max-height: 300px;
@@ -42,22 +41,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: white;
-  }
-  
+    color: white;}
   .totalTextTitle {
-    margin-right: 10px;
-  }
-  
+    margin-right: 10px;}
   .button {
     height: 30px;
     color: #d1411e;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  @media screen and (max-width: 800px) {
+    margin-top: 20px;}
+
+@media screen and (max-width: 800px) {
     .container {
     flex-direction: column;
     padding: 20px;
@@ -72,8 +66,7 @@
     width: 60%;
    }
   }
-
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
  
     .table {
       display: flex;
@@ -123,5 +116,19 @@
     .wrapper{
       width: 100%;
     }
-  }
+}
 
+.paymentMethods {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payButton {
+  padding: 10px 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: white;
+  color: teal;
+  font-weight: bold;
+}

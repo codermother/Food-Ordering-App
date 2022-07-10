@@ -35,6 +35,7 @@
 .texts {
   margin-left: 20px;
   color: white;
+  cursor: pointer;
 }
 
 .text:first-child {
