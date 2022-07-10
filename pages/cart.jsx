@@ -9,10 +9,13 @@ import {
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
+import OrderDetails from "../components/OrderDetails";
+import axios from "axios";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
+  const [cash, setCash] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -25,8 +28,7 @@ function Cart() {
       const res = await axios.post("http://localhost:3000/api/orders", data);
       if (res.status === 201) {
         dispatch(reset());
-        /*     router.push(`/orders/${res.data._id}`); */
-        router.push(`/orders/${2}`);
+        router.push(`/orders/${res.data._id}`);
       }
     } catch (err) {
       console.log(err);
@@ -179,6 +181,7 @@ function Cart() {
           )}
         </div>
       </div>
+      {cash && <OrderDetails total={cart.total} createOrder={createOrder} />}
     </div>
   );
 }
