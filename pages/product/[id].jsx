@@ -1,13 +1,16 @@
 import axios from "axios";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import styles from "../../styles/Product.module.css";
+import { addProduct } from "../../redux/cartSlice";
 
 function Product({ pizza }) {
   const [size, setSize] = useState(0);
   const [price, setPrice] = useState(pizza.prices[0]);
   const [extras, setExtras] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -36,6 +39,10 @@ function Product({ pizza }) {
       changePrice(-option.price);
       setExtras(extras.filter((extra) => extra._id !== option._id));
     }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...pizza, extras, price, quantity }));
   };
 
   return (
@@ -81,12 +88,14 @@ function Product({ pizza }) {
         </div>
         <div className={styles.add}>
           <input
-            omChange={(e) => setQuantity(e.target.value)}
+            onChange={(e) => setQuantity(e.target.value)}
             type="number"
             defaultValue={1}
             className={styles.quantity}
           />
-          <button className={styles.button}>Add to Cart</button>
+          <button className={styles.button} onClick={handleClick}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
@@ -95,7 +104,7 @@ function Product({ pizza }) {
 
 export const getServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    `http://localhost:3002/api/products/${params.id}`
+    `http://localhost:3000/api/products/${params.id}`
   );
   return {
     props: { pizza: response.data },
