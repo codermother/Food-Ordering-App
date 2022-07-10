@@ -7,7 +7,9 @@ function PizzaCard({ product }) {
     <div className={styles.container}>
       <div className={styles.image}>
         <Link href={`/product/${product._id}`}>
-          <Image src={product.img} alt="" width={500} height={500} />
+          <div>
+            <Image src={product.img} alt="" width={500} height={500} />
+          </div>
         </Link>
       </div>
       <h1 className={styles.title}>{product.title}</h1>

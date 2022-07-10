@@ -28,13 +28,15 @@ function Navbar() {
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           <Link href="/">
-            <Image
-              src="/img/logo.png"
-              alt=""
-              width="100px"
-              height="100px"
-              className={styles.listItem}
-            />
+            <div>
+              <Image
+                src="/img/logo.png"
+                alt=""
+                width="100px"
+                height="100px"
+                className={styles.listItem}
+              />
+            </div>
           </Link>
           <li className={styles.listItem}>Events</li>
           <li className={styles.listItem}>Blog</li>
@@ -42,7 +44,7 @@ function Navbar() {
         </ul>
       </div>
       <Link href="/cart" passHref>
-        <div className={styles.item}>
+        <div className={styles.listItem}>
           <div className={styles.cart}>
             <Image src="/img/cart.png" alt="" width="30px" height="30px" />
             <div className={styles.counter}>{quantity}</div>
