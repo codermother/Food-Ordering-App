@@ -32,7 +32,7 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const response = await axios.get(
-    "https://food-ordering-app-codermother.vercel.app/api/products"
+    "https://food-ordering-app-ten.vercel.app//api/products"
   );
   return {
     props: { productList: response.data, admin },
