@@ -69,7 +69,7 @@ function Index({ orders, products }) {
                 <td>{product.title}</td>
                 <td>${product.prices[0]}</td>
                 <td>
-                  <button className={styles.button}>Edit</button>
+                  {/*   <button className={styles.button}>Edit</button> */}
                   <button
                     className={styles.button}
                     onClick={() => handleDelete(product._id)}
