@@ -11,7 +11,7 @@ function Index({ orders, products }) {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        "http://localhost:3000/api/products/" + id
+        "https://food-ordering-app-codermother.vercel.app/api/products/" + id
       );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (error) {
@@ -25,7 +25,7 @@ function Index({ orders, products }) {
 
     try {
       const response = await axios.put(
-        "http://localhost:3000/api/orders/" + id,
+        "https://food-ordering-app-codermother.vercel.app/api/orders/" + id,
         {
           status: currentStatus + 1,
         }
@@ -130,8 +130,12 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  const productResponse = await axios.get("http://localhost:3000/api/products");
-  const orderResponse = await axios.get("http://localhost:3000/api/orders");
+  const productResponse = await axios.get(
+    "https://food-ordering-app-codermother.vercel.app/api/products"
+  );
+  const orderResponse = await axios.get(
+    "https://food-ordering-app-codermother.vercel.app/api/orders"
+  );
 
   return {
     props: {
